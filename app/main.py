@@ -10,5 +10,5 @@ def copy_file(command: str) -> None:
                           open(target_file, "w") as file_out):
                         for line in file_in:
                             file_out.write(line)
-                except FileNotFoundError:
-                    pass
+                except FileNotFoundError as e:
+                    print(e)
